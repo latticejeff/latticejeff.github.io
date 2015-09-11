@@ -18,9 +18,12 @@
     <link href="css/dashboard.css" rel="stylesheet">
 	
 	<style>
+	
       #map {
         height: 640px;
       }
+	  
+		
     </style>
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
@@ -57,14 +60,8 @@
 
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
-            <li><a href="#">點選右方區域列出分行資訊<span class="glyphicon glyphicon-arrow-right"></span></a></li>
-            
-          </ul>
-               
-        </div>
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+	  
+        <div id="district" class="col-xs-12 col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 col-lg-10 main">
           <h1 class="page-header">台北市服務據點</h1>
 			<div class="table-responsive">         
 				<nav class="navbar navbar-inverse">
@@ -88,10 +85,20 @@
 				  </div>
 				</nav>
 			  </div>
-			  <span class="label label-danger" id="updateTime">各分行地理資訊</span>
-			  <div class="col-md-10 col-lg-12" id="map"></div>  
-					  
+			  	  
 			</div>
+			
+		<div id="infoList" class="col-xs-12 col-sm-3 col-md-2 col-lg-2 sidebar">
+			<ul class="nav nav-sidebar">
+				<li><a href="#">點選右方區域列出分行資訊<span class="glyphicon glyphicon-arrow-right"></span></a></li>   
+			</ul>              
+		</div>
+		
+		<div id="mapArea" class="col-xs-12 col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 col-lg-10 main">
+			<span class="label label-danger" id="updateTime">各分行地理資訊</span>
+			<div id="map"></div>  
+		</div>
+		
 		</div>
 				  
 	</div>
@@ -108,6 +115,7 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
 	<!--Load map-->
+	<script src="js/mediaquery.js"></script>
 	<script src="js/bankinfo.js"></script>
 	<script src="js/map.js"></script>
 	<script src="js/handle.js"></script>
